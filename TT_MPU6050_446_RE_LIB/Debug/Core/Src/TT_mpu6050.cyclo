@@ -1,0 +1,6 @@
+TT_mpu6050.c:25:6:TT_Init_MPU6050	1
+TT_mpu6050.c:36:6:TT_Get_Gyro_Cal_Values	2
+TT_mpu6050.c:61:6:TT_Get_All_Values	2
+TT_mpu6050.c:101:7:TT_Get_Pitch_Angle	1
+TT_mpu6050.c:106:7:TT_Get_Roll_Angle	1
+TT_mpu6050.c:111:7:TT_Get_Yaw_Angle	1
