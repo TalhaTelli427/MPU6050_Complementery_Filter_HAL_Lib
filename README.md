@@ -18,8 +18,8 @@ The aim of the project is to create an algorithm that detects the body position 
   
 ## Test Video
 
-
-[![MPU6050 Complementery Filter]([https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE](https://www.youtube.com/watch?v=BP3j3LxsFCc)/0.jpg)](https://www.youtube.com/watch?v=[YOUTUBE_VIDEO_ID_HERE](https://www.youtube.com/watch?v=BP3j3LxsFCc))  
+[![Mpu6050 Complementery Filter Novohead](https://youtu.be/BP3j3LxsFCc.jpg)](https://youtu.be/BP3j3LxsFCc)
+  
   
 ## Detailed Description Of The Code
 
