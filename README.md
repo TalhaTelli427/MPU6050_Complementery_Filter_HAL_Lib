@@ -1,7 +1,5 @@
 # MPU6050_Complementery_Filter_HAL_Lib For Novohead 
 
-
-
 The aim of the project is to create an algorithm that detects the body position of the user with the help of the sensor and microcontroller placed on the VR headset. I used STM32F446RE microcontroller and MPU6050 IMU (Gyroscope and Acceleration sensor) to make this happen. I also provided the communication between MPU6050 and STM32 with I2C communication protocol.
 ## Block Diagram
 
@@ -148,4 +146,6 @@ Filterd_Pitch += Filterd_Roll * sin(Gyro_Z * Omega);
 Filterd_Roll -= Filterd_Pitch * sin(Gyro_Z * Omega);
 
 ```
+# Conclusion
 
+As a result, with an IMU sensor on the VR headset, we can track the person's head up and down position, tilting position to the right and left, and finally the position of turning the head to the left and right.
