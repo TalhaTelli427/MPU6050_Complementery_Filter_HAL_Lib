@@ -1,6 +1,10 @@
 # MPU6050_Complementery_Filter_HAL_Lib For Novohead 
 
-The aim of the project is to create an algorithm that detects the body position of the user with the help of the sensor and microcontroller placed on the VR headset. I used STM32F446RE microcontroller and MPU6050 IMU (Gyroscope and Acceleration sensor) to make this happen. I also provided the communication between MPU6050 and STM32 with I2C communication protocol.
+The aim of the project is to create an algorithm that detects the body position of the user with the help of the sensor and microcontroller placed on the VR headset. I used STM32F446RE microcontroller and MPU6050 IMU (Gyroscope and Acceleration sensor) to make this happen. I also provided the communication between MPU6050 and STM32 with I2C communication protocol.For this project we use the complementery filter for filtiring tilt angels.
+
+The calculated head position is applied to related functions that affect the user's gaming or app experience using the VR headset. Detection of the head position allows the user to view their head up, down, right and left. These pieces of information allow the user to interact with virtual objects or scenes in a more dynamic way. For example, it can affect application-specific functions such as the response of in-game characters or camera view to head movements. The calculated head position is constantly updated in real time, providing quick response to the user's instant actions and a more immersive experience.
+
+
 ## Algorithm Block Diagram
 
 ![Novohead Diyagram drawio](https://github.com/TalhaTelli427/MPU6050_Complementery_Filter_HAL_Lib/assets/132828233/1b65f850-68d5-4ec4-8687-abf15fc8f47e)
