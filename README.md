@@ -30,7 +30,7 @@ HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADRR, MPU6050_POWER_1, 1, data, 1, 10000);
 // Internal Low Pass Filter Config
 data[0] = 0x04;
 HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADRR, MPU6050_CONFIG, 1, data, 1, 10000);
-//Acceloremter Config +-4g
+//Acceloremter Config +-8g
 data[0] = 0x10;
 HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADRR, MPU6050_ACCE_CONFIG, 1, data, 1,
 		10000);
