@@ -35,7 +35,7 @@ void TT_Init_MPU6050(void) {
 	// Internal Low Pass Filter Config
 	data[0] = 0x04;
 	HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADRR, MPU6050_CONFIG, 1, data, 1, 10000);
-	//Acceloremter Config +-4g
+	//Acceloremter Config +-8g
 	data[0] = 0x10;
 	HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADRR, MPU6050_ACCE_CONFIG, 1, data, 1,
 			10000);
@@ -126,18 +126,18 @@ void TT_Get_All_Values(void) {
 		Angle_Yaw_Gyro += Gyro_Z * dt * 0.98039215686274;
 
 		//This process minimizes the noise applied by the axes to each other.
-		Filterd_Pitch += Filterd_Roll * sin(Gyro_Z * 0.00034906585);
-		Filterd_Roll -= Filterd_Pitch * sin(Gyro_Z * 0.00034906585);
-	//	Angle_Yaw_Gyro -= Filterd_Roll * sin(Gyro_Raw_Z * 0.00000532924);
+		Filterd_Pitch += Filterd_Roll * sin(Gyro_Z * Omega);
+		Filterd_Roll -= Filterd_Pitch * sin(Gyro_Z * Omega);
 
 		Time = HAL_GetTick();
+		//	Angle_Yaw_Gyro -= Filterd_Roll * sin(Gyro_Raw_Z * 0.00000532924);
 	}
 }
 void TT_UART_Data_Transmitter(float Transmit_Data){
-	char tampon[8];
+	char Buffer[8];
 
-	sprintf(tampon,"%.2f",Transmit_Data);
-	HAL_UART_Transmit(&huart2, (uint8_t*)tampon, sizeof(tampon), HAL_MAX_DELAY);
+	sprintf(Buffer,"%.2f",Transmit_Data);
+	HAL_UART_Transmit(&huart2, (uint8_t*)Buffer, sizeof(Buffer), HAL_MAX_DELAY);
 
 }
 
