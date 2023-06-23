@@ -6,8 +6,20 @@ The aim of the project is to create an algorithm that detects the body position 
 
 ## Block Diagram
 
-![Uygulama Ekran Görüntüsü](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Novohead Diyagram drawio](https://github.com/TalhaTelli427/MPU6050_Complementery_Filter_HAL_Lib/assets/132828233/1b65f850-68d5-4ec4-8687-abf15fc8f47e)
 
+
+
+## Circuit Image
+
+
+![Circuit Image](https://github.com/TalhaTelli427/MPU6050_Complementery_Filter_HAL_Lib/assets/132828233/50dd8640-d02e-40e5-9ef6-1fa706b3506a)
+
+  
+## Test Video
+
+
+[![MPU6050 Complementery Filter]([https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE](https://www.youtube.com/watch?v=BP3j3LxsFCc)/0.jpg)](https://www.youtube.com/watch?v=[YOUTUBE_VIDEO_ID_HERE](https://www.youtube.com/watch?v=BP3j3LxsFCc))  
   
 ## Detailed Description Of The Code
 
