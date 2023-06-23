@@ -154,7 +154,7 @@ Filterd_Roll -= Filterd_Pitch * sin(Gyro_Z * Omega);
 
 As a result, thanks to an IMU sensor and microcontroller in the VR headset, we can monitor in real time the position of the head up and down, the tilted position to the right and left, and finally the position of turning the head left and right.
 
-If you want to go to the   [Soruce](TT_MPU6050_446_RE_LIB/Core/Src/TT_mpu6050.c). 
+If you want to go to the   [Source](TT_MPU6050_446_RE_LIB/Core/Src/TT_mpu6050.c). 
 If you want to go to the   [Header](TT_MPU6050_446_RE_LIB/Core/Inc/TT_MPU6050.h).
 If you want to go to the   [Main](TT_MPU6050_446_RE_LIB/Core/Src/main.c).
 
