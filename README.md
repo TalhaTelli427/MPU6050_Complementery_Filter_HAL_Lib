@@ -149,5 +149,7 @@ Filterd_Roll -= Filterd_Pitch * sin(Gyro_Z * Omega);
 # Conclusion
 
 As a result, with an IMU sensor on the VR headset, we can track the person's head up and down position, tilting position to the right and left, and finally the position of turning the head to the left and right.
-if you want to go to the source  [Soruce](TT_MPU6050_446_RE_LIB/Core/Src/TT_mpu6050.c)
-if you want to go to the header  [Header](TT_MPU6050_446_RE_LIB/Core/Inc/TT_MPU6050.h)
+
+
+If you want to go to the source  [Soruce](TT_MPU6050_446_RE_LIB/Core/Src/TT_mpu6050.c).
+If you want to go to the header  [Header](TT_MPU6050_446_RE_LIB/Core/Inc/TT_MPU6050.h).
