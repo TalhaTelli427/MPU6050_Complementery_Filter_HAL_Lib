@@ -61,7 +61,7 @@ main-build: TT_MPU6050_446_RE_LIB.elf secondary-outputs
 
 # Tool invocations
 TT_MPU6050_446_RE_LIB.elf TT_MPU6050_446_RE_LIB.map: $(OBJS) $(USER_OBJS) C:\stm_projects\Lesson\TT_MPU6050_446_RE_LIB\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "TT_MPU6050_446_RE_LIB.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\stm_projects\Lesson\TT_MPU6050_446_RE_LIB\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TT_MPU6050_446_RE_LIB.map" -Wl,--gc-sections -static -L../Middlewares/ST/ARM/DSP/Lib --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "TT_MPU6050_446_RE_LIB.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\stm_projects\Lesson\TT_MPU6050_446_RE_LIB\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TT_MPU6050_446_RE_LIB.map" -Wl,--gc-sections -static -L../Middlewares/ST/ARM/DSP/Lib --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

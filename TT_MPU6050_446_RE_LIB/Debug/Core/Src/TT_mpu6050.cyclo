@@ -1,6 +1,7 @@
-TT_mpu6050.c:25:6:TT_Init_MPU6050	1
-TT_mpu6050.c:36:6:TT_Get_Gyro_Cal_Values	2
-TT_mpu6050.c:61:6:TT_Get_All_Values	2
-TT_mpu6050.c:101:7:TT_Get_Pitch_Angle	1
-TT_mpu6050.c:106:7:TT_Get_Roll_Angle	1
-TT_mpu6050.c:111:7:TT_Get_Yaw_Angle	1
+TT_mpu6050.c:31:6:TT_Init_MPU6050	1
+TT_mpu6050.c:48:6:TT_Get_Gyro_Cal_Values	2
+TT_mpu6050.c:75:6:TT_Get_All_Values	2
+TT_mpu6050.c:136:6:TT_UART_Data_Transmitter	1
+TT_mpu6050.c:144:7:TT_Get_Pitch_Angle	1
+TT_mpu6050.c:149:7:TT_Get_Roll_Angle	1
+TT_mpu6050.c:154:7:TT_Get_Yaw_Angle	1
