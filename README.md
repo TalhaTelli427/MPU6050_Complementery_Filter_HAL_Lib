@@ -48,34 +48,36 @@ Then we read 2000 gyro values ​​and divide it by 2000 and after waiting 1000
 ```C
 void TT_Get_Gyro_Cal_Values(void) {
 
-	for (int i = 0; i < 2000; i++) {
+for (int i = 0; i < 2000; i++) {
 
-		HAL_I2C_Mem_Read(&hi2c1, MPU6050_ADRR, MPU6050_GYRO_MESURE, 1,
-				Gyro_Cal_Buffer, 6, HAL_MAX_DELAY);
+	HAL_I2C_Mem_Read(&hi2c1, MPU6050_ADRR, MPU6050_GYRO_MESURE, 1,
+			Gyro_Cal_Buffer, 6, HAL_MAX_DELAY);
 
-		Gyro_Cal_Raw_X = (Gyro_Cal_Buffer[0] << 8 | Gyro_Cal_Buffer[1]);
-		Gyro_Cal_Raw_Y = (Gyro_Cal_Buffer[2] << 8 | Gyro_Cal_Buffer[3]);
-		Gyro_Cal_Raw_Z = (Gyro_Cal_Buffer[4] << 8 | Gyro_Cal_Buffer[5]);
+	Gyro_Cal_Raw_X = (Gyro_Cal_Buffer[0] << 8 | Gyro_Cal_Buffer[1]);
+	Gyro_Cal_Raw_Y = (Gyro_Cal_Buffer[2] << 8 | Gyro_Cal_Buffer[3]);
+	Gyro_Cal_Raw_Z = (Gyro_Cal_Buffer[4] << 8 | Gyro_Cal_Buffer[5]);
 
-		Gyro_Cal_X += (float) Gyro_Cal_Raw_X;
-		Gyro_Cal_Y += (float) Gyro_Cal_Raw_Y;
-		Gyro_Cal_Z += (float) Gyro_Cal_Raw_Z;
+	Gyro_Cal_X += (float) Gyro_Cal_Raw_X;
+	Gyro_Cal_Y += (float) Gyro_Cal_Raw_Y;
+	Gyro_Cal_Z += (float) Gyro_Cal_Raw_Z;
 
-		HAL_Delay(20);
+	HAL_Delay(20);
 
 	}
 
-	Gyro_Cal_X /= 2000;
-	Gyro_Cal_Y /= 2000;
-	Gyro_Cal_Z /= 2000;
-	HAL_Delay(1000);
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, SET);
+Gyro_Cal_X /= 2000;
+Gyro_Cal_Y /= 2000;
+Gyro_Cal_Z /= 2000;
+HAL_Delay(1000);
+HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, SET);
 
 }
 ```
 
 After the calibration data is obtained, the system makes a gyro reading and subtracts the calibration value from the raw gyro value read, thus minimizing the dirft problem. And the  given in the datasheet is divided by the LSB sensitivity parameter.
 ```C
+void TT_Get_All_Values(void) {
+
 		//Getting Gyro data
 HAL_I2C_Mem_Read(&hi2c1, MPU6050_ADRR, MPU6050_GYRO_MESURE, 1,
 		Gyro_Buffer, 6, 100000);
