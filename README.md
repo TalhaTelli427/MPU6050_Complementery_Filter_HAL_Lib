@@ -1,4 +1,4 @@
-# MPU6050_Complementery_Filter_HAL_Lib For Novohead 
+# MPU6050_Complementery_Filter_HAL_Lib 
 
 
 
